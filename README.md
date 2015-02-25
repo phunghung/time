@@ -1,2 +1,0 @@
-# time
-gio : phut : giay
