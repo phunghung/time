@@ -1,0 +1,28 @@
+#include<stdio.h>
+#include<conio.h>
+struct sinhvien
+{
+	char ten[30], que[30];
+	float diem;
+}lop[100];
+int main()
+{
+	int i, n;
+	char a[10]="Ho ten", b[10]="Que quan", c[10]="Diem tb";
+	printf("Nhap so sinh vien: "); scanf("%d", &n);
+	fflush(stdin);
+	for(i=0;i<n;i++)
+	{
+		printf("\nnhap thong tin sinh vien thu %d:\n", i+1);
+		printf("\nHo ten: "); gets(lop[i].ten);
+		printf("\nQue quan: "); gets(lop[i].que);
+		printf("\nDiem trung binh: "); scanf("%f", &lop[i].diem);
+	}
+	printf("\n-------------------------------------------------------------------\n");
+	printf("\nHien thi thong tin sinh vien da nhap: ");
+	for(i=0;i<n;i++)
+	{
+		printf("\n%s %25s %10s\n",a,b,c);
+		printf("\n%s %15s %10.2f", lop[i].ten, lop[i].que, lop[i].diem);
+	}
+}
